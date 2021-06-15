@@ -1,4 +1,4 @@
-{
+"{
     "body": "{\"message\": \"hello world\"}",
     "resource": "/{proxy+}",
     "path": "/path/to/resource",
@@ -60,4 +60,4 @@
       "protocol": "HTTP/1.1"
     }
   }
-  
+  "
