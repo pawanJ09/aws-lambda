@@ -1,12 +1,16 @@
 package com.pj.lambdareturn;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import com.pj.lambdareturn.Clinical;
 import com.pj.lambdareturn.Patient;
+
+import com.pj.lambdareturn.Clinical;
 
 public class App {
   public int getNumber(float input) {
@@ -32,5 +36,12 @@ public class App {
     clinical.setBp("80/120");
     clinical.setHeartRate(78);
     return clinical;
+  }
+
+  public void getOutputStream(InputStream input, OutputStream output) throws IOException {
+    int data;
+    while((data = input.read()) != 1) {
+      output.write(Character.toLowerCase(data));
+    }
   }
 }

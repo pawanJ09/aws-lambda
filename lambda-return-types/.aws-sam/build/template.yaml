@@ -10,6 +10,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: HelloWorldFunction
-      Handler: com.pj.lambdareturn.App::getClinicals
+      Handler: com.pj.lambdareturn.App::getOutputStream
       Runtime: java8
       MemorySize: 512
+      Timeout: 10
