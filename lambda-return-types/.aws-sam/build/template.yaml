@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: 'lambda-return-types
+
+  Sample SAM Template for lambda-return-types
+
+  '
+Resources:
+  HelloWorldFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: HelloWorldFunction
+      Handler: com.pj.lambdareturn.App::getClinicals
+      Runtime: java8
+      MemorySize: 512
