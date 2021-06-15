@@ -1,7 +1,7 @@
 package helloworld;
 
 public class App {
-  public String hello() {
-    return "Lambdas are super easy and awesome !!";
+  public String hello(String name) {
+    return "Lambdas are super easy and awesome !!" + name;
   }
 }
