@@ -7,9 +7,8 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-
+import com.amazonaws.services.lambda.runtime.Context;
 import com.pj.lambdareturn.Patient;
-
 import com.pj.lambdareturn.Clinical;
 
 public class App {
@@ -44,4 +43,11 @@ public class App {
       output.write(Character.toLowerCase(data));
     }
   }
+
+  public void printEnvVariableDemo(Context context) {
+    System.out.println("Printing env variable ENV_VAR: " + System.getenv("ENV_VAR"));
+    System.out.println("Lambda remaining time: " + context.getRemainingTimeInMillis());
+    System.out.println("Lambda Log Stream Name: " + context.getLogStreamName());
+  }
+
 }

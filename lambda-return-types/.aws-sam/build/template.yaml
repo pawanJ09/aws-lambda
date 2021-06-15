@@ -10,7 +10,10 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: HelloWorldFunction
-      Handler: com.pj.lambdareturn.App::getOutputStream
+      Handler: com.pj.lambdareturn.App::printEnvVariableDemo
       Runtime: java8
       MemorySize: 512
       Timeout: 10
+      Environment:
+        Variables:
+          ENV_VAR: develop
